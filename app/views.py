@@ -48,5 +48,5 @@ def game_query():
     db.session.add(sq)
     sq.user_id = user.id
     db.session.commit()
-    #get the recommendation
+    data = helper_functions.get_popular(data["content"])
     return jsonify({"datas": ["ok", "ok1"]})
