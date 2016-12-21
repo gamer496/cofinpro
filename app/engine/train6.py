@@ -73,7 +73,7 @@ for n in queries:
 #print mapping
 #sys.exit( 0 )
 
-reader = csv.reader( t )
+reader = csv.reader( t, delimiter = " " )
 # headers = reader.next()
 
 o = open( output_file, 'wb' )

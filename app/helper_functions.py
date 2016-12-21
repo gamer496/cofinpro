@@ -12,9 +12,9 @@ def get_popular(user_obj, query_obj):
     f.close()
     l = os.path.join(k, "train6.py")
     command = "python " + l + " " + os.path.join(k, "train.csv") + " " + os.path.join(k, "test_new.csv") + " " + os.path.join(k, "prediction_new.csv") + " " + os.path.join(k, "sku_name_prepared.tsv")
-    print "*"*80
-    print command
-    print "*"*80
+    # print "*"*80
+    # print command
+    # print "*"*80
     os.system(command)
     f1 = open(os.path.join(k, "prediction_new.csv"))
     reader = csv.reader(f1, delimiter = " ")
