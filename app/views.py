@@ -3,6 +3,11 @@ from models import *
 from flask import jsonify, request
 import os
 from datetime import datetime
+
+# my imports
+import helper_functions
+
+#python imports
 import json
 import random
 import ipdb
@@ -48,5 +53,5 @@ def game_query():
     db.session.add(sq)
     sq.user_id = user.id
     db.session.commit()
-    data = helper_functions.get_popular(data["content"])
-    return jsonify({"datas": ["ok", "ok1"]})
+    data = helper_functions.get_popular(user, sq)
+    return jsonify({"datas": data})

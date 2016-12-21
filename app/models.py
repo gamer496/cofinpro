@@ -44,3 +44,14 @@ class SearchQuery(db.Model):
 
     def __repr__(self):
         return "Query: " + self.content
+
+class Game(db.Model):
+    __tablename__ = "game"
+    id          =db.Column      (db.Integer, primary_key = True)
+    name        =db.Column      (db.String(200))
+
+    def __init__(self, name):
+        self.name = name
+
+    def __repr__(self):
+        return "Game :" + self.name
